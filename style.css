@@ -299,7 +299,7 @@ footer p {
   right: 0;
   background-color: rgb(19, 19, 19);
   opacity: 0.5;
-  opacity: 0.7;
+  opacity: 0.85;
   z-index: -1;
 }
 
@@ -308,11 +308,11 @@ footer p {
   top: 10%;
   left: 25%;
   right: 25%;
-  background: rgb(141, 141, 141);
+  background: rgb(179, 179, 179);
   padding: 50px 70px;
   visibility: hidden;
   z-index: 2;
-  max-height: 85vh;
+  max-height: 75vh;
   overflow: scroll;
 }
 

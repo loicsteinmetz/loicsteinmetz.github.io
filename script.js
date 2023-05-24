@@ -15,15 +15,18 @@ const bg = document.querySelector('#popup-background');
 contactBtns.forEach(contact => {
   contact.addEventListener('click', () => {
     popup.style.visibility = 'visible';
+    document.body.style.overflow = 'hidden';
   });
 });
 
 window.addEventListener('click', (e) => {
   if (e.target == bg) {
     popup.style.visibility = 'hidden';
+    document.body.style.overflow = 'inherit';
   }
 });
 
 quit.addEventListener('click', () => {
   popup.style.visibility = 'hidden';
+  document.body.style.overflow = 'inherit';
 });
