@@ -188,6 +188,10 @@ section h3:after {
   width: 120px;
 }
 
+.current-experience {
+  border: 2px solid rgb(156, 113, 5)
+}
+
 .experience-image img {
   width: 100%;
   height: auto;
