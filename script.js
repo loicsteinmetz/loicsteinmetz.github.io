@@ -1,4 +1,4 @@
-const _ = document.querySelector('span');
+const _ = document.querySelector('#underscore');
 setInterval(() => {
   if (_.style.opacity == 1) {
     _.style.opacity = 0;
