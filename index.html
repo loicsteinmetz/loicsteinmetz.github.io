@@ -35,7 +35,8 @@
       </div>
       <div id="brand">
         <h1>Loïc Steinmetz</h1>
-        <h2>Développeur <span lang="en">JavaScript/TypeScript</span> <span aria-hidden="true">_</span></h2>
+        <h2>Développeur <span lang="en">JavaScript/TypeScript</span> <span aria-hidden="true" id="underscore">_</span></h2>
+        <!-- TODO accessibility : ul/li -->
         <div id="networks">
           <a href="mailto:loic.steinmetz@outlook.fr" target="_blank" ><div id="network"><img src="img/email.png" alt="Envoyer un email"/></div></a>
           <a href="https://www.linkedin.com/in/loic-steinmetz/" target="_blank"><div id="network"><img src="img/linkedin.png" alt="Consulter le profil LinkedIn"/></div></a>
@@ -46,9 +47,10 @@
     </div>
   </header>
 
-  <main>
+  <main role="main">
 
   <section id="intro">
+    <h1 class="hidden">Introduction</h1>
     <p>
       Développeur <span lang="en">full-stack</span> spécialisé en JavaScript/TypeScript, je suis titulaire d'un DUT et d'une Licence Professionnelle orientés Web et Génie Logiciel.
       Actuellement en poste pour <strong><a href="https://www.fr.jamespot.com/" target="_blank"><span lang="en">Jamespot</span></a></strong> ! 🚀
@@ -60,8 +62,9 @@
     </div>
   </section>
 
+  <!-- TODO accessibility : ul/li -->
   <section id="skills">
-    <h3># Compétences</h3>
+    <h1># Compétences</h1>
     <div id="skills-list">
       <p lang=en">JavaScript</p>
       <p lang=en">TypeScript</p>
@@ -90,8 +93,9 @@
     </div>
   </section>
 
+  <!-- TODO accessibility : ul/li -->
   <section id="experiences">
-    <h3># Expériences</h3>
+    <h1># Expériences</h1>
     <div id="experiences-list">
       <div class="experience current-experience">
         <div class="experience-image">
@@ -184,8 +188,9 @@
     </div>
   </section>
 
+  <!-- TODO accessibility : ul/li -->
   <section id="formation">
-    <h3># Formation</h3>
+    <h1># Formation</h1>
     <div id="formations-list">
       <div class="formation">
         <p class="formation-title">2021</p>
@@ -238,6 +243,7 @@
     </div>
   </footer>
 
+  <!-- TODO accessibility : ul/li -->
   <div id="popup">
     <div id="popup-background"></div>
     <h3># Contact</h3>
