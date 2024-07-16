@@ -97,9 +97,9 @@ section {
 section h1 {
   font-size: 30px;
   display: flex;
-  flex-direction: column;
+  gap: 10px;
   padding-bottom: 20px;
-  border: 1px solid rgb(158, 158, 158);
+  border-bottom: 1px solid rgb(158, 158, 158);
   margin-bottom: 40px;
 }
 
