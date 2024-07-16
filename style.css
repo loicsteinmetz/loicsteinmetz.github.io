@@ -94,7 +94,7 @@ section {
   box-sizing: border-box;
 }
 
-section h3 {
+section h1 {
   font-size: 30px;
   display: flex;
   flex-direction: column;
