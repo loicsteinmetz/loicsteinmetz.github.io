@@ -100,7 +100,7 @@ section h1 {
   flex-direction: column;
 }
 
-section h3:after {
+section h1:after {
   content: '';
   width: 100%;
   height: 1px;
