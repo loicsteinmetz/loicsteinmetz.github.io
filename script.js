@@ -26,7 +26,14 @@ window.addEventListener('click', (e) => {
   }
 });
 
-quit.addEventListener('click', () => {
+const quitPopup = () => {
   popup.style.visibility = 'hidden';
   document.body.style.overflow = 'inherit';
+}
+
+quit.addEventListener('click', quitPopup);
+document.addEventListener('keyup', (e) => {
+  if (e.key === "Escape") {
+    quitPopup();
+  }
 });
