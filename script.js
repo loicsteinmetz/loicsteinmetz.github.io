@@ -1,39 +1,50 @@
-const _ = document.querySelector('#underscore');
-setInterval(() => {
-  if (_.style.opacity == 1) {
-    _.style.opacity = 0;
-  } else {
-    _.style.opacity = 1
-  }
-}, 500);
+const bg = document.querySelector('#bg');
+const clientHeight = window.innerHeight;
+const nbRays = clientHeight * 3;
 
-const contactBtns = document.querySelectorAll('.contact-btn');
-const popup = document.querySelector('#popup');
-const quit = document.querySelector('#quit');
-const bg = document.querySelector('#popup-background');
-
-contactBtns.forEach(contact => {
-  contact.addEventListener('click', () => {
-    popup.style.visibility = 'visible';
-    document.body.style.overflow = 'hidden';
-  });
+[...Array(nbRays).keys()].forEach(_ => {
+    const div = document.createElement('div');
+    div.classList.add('ray');
+    bg.appendChild(div);
 });
 
-window.addEventListener('click', (e) => {
-  if (e.target == bg) {
-    popup.style.visibility = 'hidden';
-    document.body.style.overflow = 'inherit';
-  }
-});
-
-const quitPopup = () => {
-  popup.style.visibility = 'hidden';
-  document.body.style.overflow = 'inherit';
+const shuffle = () => {
+    document.querySelectorAll('.ray').forEach(r => {
+        r.style.width = Math.floor(Math.random() * 75) + '%';
+        r.style.marginLeft = Math.floor(Math.random() * 60) + '%';
+    });
 }
 
-quit.addEventListener('click', quitPopup);
-document.addEventListener('keyup', (e) => {
-  if (e.key === "Escape") {
-    quitPopup();
-  }
+setInterval(shuffle, 4000);
+setTimeout(shuffle, 100);
+
+document.querySelectorAll('.wave').forEach(w => {
+    const t = w.innerHTML;
+    let i = 0;
+    setInterval(() => {
+        const arr = t.split('').map((e, idx) => idx === i ? '&nbsp;' : e);
+        i = i < t.length - 1 ? i + 1 : 0;
+        w.innerHTML = arr.join('');
+    }, 100)
+});
+
+document.querySelectorAll('.double').forEach(w => {
+    const t = w.innerHTML;
+    let i = 0;
+    setInterval(() => {
+        const arr = t.split(' ').map((e, idx) => idx === t.split(' ').length - 1 ? e : idx === i ? e + '.' : e + ' ');
+        i = i < t.split(' ').length - 2 ? i + 1 : 0;
+        w.innerHTML = arr.join('');
+    }, 500)
+});
+    
+
+const texts = document.querySelectorAll('p');
+let i = 0;
+document.addEventListener('mousedown', () => {
+    texts[i].style.display = 'none';
+    i = i < texts.length - 1 ? i + 1 : 0;
+});
+document.addEventListener('mouseup', () => {
+    texts[i].style.display = 'block';
 });
