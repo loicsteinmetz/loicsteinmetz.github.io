@@ -34,6 +34,23 @@ body {
     right: 0;
 }
 
+.circle {
+    background-color: red;
+    mix-blend-mode: overlay;
+    width: 30%;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 100%;
+    transition: background-color 3s, margin-left 3s;
+    max-width: 100px;
+}
+#circle1 {
+    top: 10%;
+}
+#circle2 {
+    bottom: 10%;
+}
+
 .ray {
     width: 0;
     flex: 1;
