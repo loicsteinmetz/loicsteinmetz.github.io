@@ -41,7 +41,7 @@ body {
     aspect-ratio: 1;
     position: absolute;
     border-radius: 100%;
-    transition: background-color 3s, margin-left 3s;
+    transition: background-color 3s;
     max-width: 100px;
 }
 #circle1 {
