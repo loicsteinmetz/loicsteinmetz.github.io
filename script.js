@@ -8,10 +8,6 @@ const nbRays = 300;
 });
 
 const shuffle = () => {
-    const color = `rgb(${ Math.floor(Math.random() * 255) }, ${ Math.floor(Math.random() * 255) }, ${ Math.floor(Math.random() * 255) })`;
-    document.querySelectorAll('.circle').forEach(c => {
-        c.style.backgroundColor = color;
-    });
     document.querySelectorAll('.ray').forEach(r => {
         r.style.width = Math.floor(Math.random() * 75) + '%';
         r.style.marginLeft = Math.floor(Math.random() * 60) + '%';

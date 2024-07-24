@@ -35,7 +35,7 @@ body {
 }
 
 .circle {
-    background-color: red;
+    background-color: yellow;
     mix-blend-mode: overlay;
     width: 30%;
     aspect-ratio: 1;
