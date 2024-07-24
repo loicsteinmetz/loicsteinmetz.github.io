@@ -1,6 +1,5 @@
 const bg = document.querySelector('#bg');
-const clientHeight = window.innerHeight;
-const nbRays = clientHeight * 3;
+const nbRays = 300;
 
 [...Array(nbRays).keys()].forEach(_ => {
     const div = document.createElement('div');
