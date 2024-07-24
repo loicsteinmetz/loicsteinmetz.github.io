@@ -24,7 +24,7 @@ body {
 }
 
 #text-box-frame {
-    width: 80%;
+    width: 50%;
     height: 250px;
     border-top: 25px solid rgb(87, 87, 87);
     border-bottom: 25px solid rgb(87, 87, 87);
@@ -122,6 +122,7 @@ p:first-of-type {
         min-height: 100px;
     }
     #text-box-frame {
+        width: 80%;
         height: 200px;
     }
 }
