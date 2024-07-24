@@ -38,14 +38,24 @@ document.querySelectorAll('.double').forEach(w => {
         w.innerHTML = arr.join('');
     }, 500)
 });
+
+document.querySelectorAll('.i-blink').forEach(w => {
+    let i = 0;
+    const letter = ['i', 'î', 'ï', '!']
+    setInterval(() => {
+        w.innerHTML = letter[i];
+        i = i < letter.length - 1 ? i + 1 : 0;
+    }, 200)
+});
     
 
 const texts = document.querySelectorAll('p');
-let i = 0;
+let j = 0;
 document.addEventListener('mousedown', () => {
-    texts[i].style.display = 'none';
-    i = i < texts.length - 1 ? i + 1 : 0;
+    console.log(j)
+    texts[j].style.display = 'none';
+    j = j < texts.length - 1 ? j + 1 : 0;
 });
 document.addEventListener('mouseup', () => {
-    texts[i].style.display = 'block';
+    texts[j].style.display = 'block';
 });
