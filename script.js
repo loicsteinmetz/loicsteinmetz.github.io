@@ -51,11 +51,17 @@ document.querySelectorAll('.i-blink').forEach(w => {
 
 const texts = document.querySelectorAll('p');
 let j = 0;
+const next = () => j = j < texts.length - 1 ? j + 1 : 0;
+const prev = () => j = j > 0 ? j - 1 : texts.length - 1;
 document.addEventListener('mousedown', () => {
     console.log(j)
     texts[j].style.display = 'none';
-    j = j < texts.length - 1 ? j + 1 : 0;
 });
-document.addEventListener('mouseup', () => {
+document.addEventListener('mouseup', (e) => {
+    if (e.clientX < window.innerWidth / 2) {
+        prev();
+    } else {
+        next();
+    }
     texts[j].style.display = 'block';
 });
