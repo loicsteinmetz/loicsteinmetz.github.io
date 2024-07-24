@@ -11,7 +11,7 @@ const shuffle = () => {
     document.querySelectorAll('.ray').forEach(r => {
         r.style.width = Math.floor(Math.random() * 75) + '%';
         r.style.marginLeft = Math.floor(Math.random() * 60) + '%';
-        const c = 256 - Math.random() * 150;
+        const c = 256 - Math.random() * 50;
         r.style.backgroundColor = `rgb(${c}, ${c}, ${c})`;
     });
 }

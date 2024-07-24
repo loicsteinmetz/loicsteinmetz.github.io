@@ -23,6 +23,16 @@ body {
     min-height: 150px;
 }
 
+#text-box-frame {
+    width: 80%;
+    height: 250px;
+    border-top: 25px solid rgb(87, 87, 87);
+    border-bottom: 25px solid rgb(87, 87, 87);
+    padding: 50px 0;
+    mix-blend-mode: color-burn;
+    z-index: 2;
+}
+
 #bg {
     background-color: white;
     display: flex;
@@ -35,8 +45,8 @@ body {
 }
 
 .circle {
-    background-color: rgb(255, 217, 0);
-    mix-blend-mode: overlay;
+    background-color: rgb(255, 143, 0);
+    mix-blend-mode: color-burn;
     width: 30%;
     aspect-ratio: 1;
     position: absolute;
@@ -110,5 +120,8 @@ p:first-of-type {
 @media screen and (max-width: 500px) {
     #text-box {
         min-height: 100px;
+    }
+    #text-box-frame {
+        height: 200px;
     }
 }
