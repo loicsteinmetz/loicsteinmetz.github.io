@@ -21,7 +21,7 @@ main {
     min-height: 150px;
     z-index: 2;
     background-color: white;
-    border: 8px solid rgba(0, 0, 0, 0.8);
+    border: 6px solid rgba(0, 0, 0, 0.8);
 }
 @media screen and (max-width: 500px) {
     #text-box {
