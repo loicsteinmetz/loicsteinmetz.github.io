@@ -105,3 +105,12 @@ p:first-of-type {
     -ms-transform: scale(-1, -1);
     transform: scale(-1, -1);
 }
+
+@keyframes white {
+    0%    { opacity: 1; }
+    50%   { opacity: 0.1; }
+    100%  { opacity: 1; }
+  }
+.white-anim {
+    animation: 4s white infinite;
+}
