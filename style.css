@@ -48,8 +48,7 @@ p:first-of-type {
     position: fixed;
     background-color: black;
     opacity: 0.8;
-    aspect-ratio: 1;
-    transition: top 2s, left 2s, width 2s, height 2s;
+    transition: top 2s, left 2s, width 2s, height 2s, transform 2s;
 }
 
 /* Styles */
