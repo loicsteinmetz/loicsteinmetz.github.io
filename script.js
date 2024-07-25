@@ -17,15 +17,19 @@ const shuffle = () => {
     circle2.style.left = getX(circle2Size) + 'px';
     circle2.style.top = getY(circle2Size) + 'px';
 
-    const square1Size = getSize();
-    square1.style.width = square1Size + 'px';
-    square1.style.left = getX(square1Size) + 'px';
-    square1.style.top = getY(square1Size) + 'px';
+    const square1X = getSize();
+    const square1Y = getSize();
+    square1.style.width = square1X + 'px';
+    square1.style.height = square1Y + 'px';
+    square1.style.left = getX(square1X) + 'px';
+    square1.style.top = getY(square1Y) + 'px';
 
-    const square2Size = getSize();
-    square2.style.width = square2Size + 'px';
-    square2.style.left = getX(square2Size) + 'px';
-    square2.style.top = getY(square2Size) + 'px';
+    const square2X = getSize();
+    const square2Y = getSize();
+    square2.style.width = square2X + 'px';
+    square2.style.height = square2Y + 'px';
+    square2.style.left = getX(square2X) + 'px';
+    square2.style.top = getY(square2Y) + 'px';
 }
 
 
@@ -57,6 +61,7 @@ const shuffle = () => {
     circle1.classList.add('shape');
     const circle1Size = getSize();
     circle1.style.borderRadius = '100%';
+    circle1.style.aspectRatio = 1;
     circle1.style.width = circle1Size + 'px';
     circle1.style.left = getX(circle1Size) + 'px';
     circle1.style.top = getY(circle1Size) + 'px';
@@ -67,6 +72,7 @@ const shuffle = () => {
     circle2.classList.add('shape');
     const circle2Size = getSize();
     circle2.style.borderRadius = '100%';
+    circle2.style.aspectRatio = 1;
     circle2.style.width = circle2Size + 'px';
     circle2.style.left = getX(circle2Size) + 'px';
     circle2.style.top = getY(circle2Size) + 'px';
@@ -75,19 +81,23 @@ const shuffle = () => {
     const square1 = document.createElement('div');
     square1.id = 'square1';
     square1.classList.add('shape');
-    const square1Size = getSize();
-    square1.style.width = square1Size + 'px';
-    square1.style.left = getX(square1Size) + 'px';
-    square1.style.top = getY(square1Size) + 'px';
+    const square1X = getSize();
+    const square1Y = getSize();
+    square1.style.width = square1X + 'px';
+    square1.style.height = square1Y + 'px';
+    square1.style.left = getX(square1X) + 'px';
+    square1.style.top = getY(square1Y) + 'px';
     container.appendChild(square1);
 
     const square2 = document.createElement('div');
     square2.id = 'square2';
     square2.classList.add('shape');
-    const square2Size = getSize();
-    square2.style.width = square2Size + 'px';
-    square2.style.left = getX(square2Size) + 'px';
-    square2.style.top = getY(square2Size) + 'px';
+    const square2X = getSize();
+    const square2Y = getSize();
+    square2.style.width = square2X + 'px';
+    square2.style.height = square2Y + 'px';
+    square2.style.left = getX(square2X) + 'px';
+    square2.style.top = getY(square2Y) + 'px';
     container.appendChild(square2);
 })();
 
