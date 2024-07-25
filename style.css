@@ -33,7 +33,7 @@ main {
 
 p {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
+    font-size: 1em;
     line-height: 20px;
     text-wrap: nowrap;
 }
@@ -79,7 +79,7 @@ p:first-of-type {
 }
 
 .small {
-    font-size: 11px;
+    font-size: 0.7em;
 }
 
 .hover-italic:hover {
