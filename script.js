@@ -38,15 +38,22 @@ const shuffle = () => {
     square2.style.transform = `rotate(${getRotation()}deg)`
 }
 
-
 (() => {
     const texts = document.querySelectorAll('p');
     let i = 0;
-    const next = () => i = i < texts.length - 1 ? i + 1 : 0;
-    const prev = () => i = i > 0 ? i - 1 : texts.length - 1;
-    document.addEventListener('mousedown', () => {
-        console.log(i)
+    const dNone = () => {
         texts[i].style.display = 'none';
+    }
+    const next = () => {
+        i = i < texts.length - 1 ? i + 1 : 0;
+        texts[i].style.display = 'block';
+    }
+    const prev = () => {
+        i = i > 0 ? i - 1 : texts.length - 1;
+        texts[i].style.display = 'block';
+    }
+    document.addEventListener('mousedown', () => {
+        dNone();
     });
     document.addEventListener('mouseup', (e) => {
         shuffle();
@@ -55,8 +62,21 @@ const shuffle = () => {
         } else {
             next();
         }
-        texts[i].style.display = 'block';
     });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight' || e.key === ' ') {
+            dNone();
+        }
+    });
+    document.addEventListener('keyup', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            shuffle();
+            next();
+        } else if (e.key === 'ArrowLeft') {
+            shuffle();
+            prev();
+        }
+    })
 })();
 
 (() => {
