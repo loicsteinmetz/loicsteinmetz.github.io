@@ -42,13 +42,15 @@ const shuffle = () => {
     const texts = document.querySelectorAll('p');
     let i = 0;
     const dNone = () => {
-        texts[i].style.display = 'none';
+        texts.forEach(t => t.style.display = 'none');
     }
     const next = () => {
+        dNone();
         i = i < texts.length - 1 ? i + 1 : 0;
         texts[i].style.display = 'block';
     }
     const prev = () => {
+        dNone();
         i = i > 0 ? i - 1 : texts.length - 1;
         texts[i].style.display = 'block';
     }
